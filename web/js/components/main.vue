@@ -15,7 +15,6 @@
 			<div class="form">
 				<p>text selector　:　</p>
 				<input type="text" id="text_selectors" v-model="text_selector">
-				<!-- <floating_button button_text="preview" @click="preview_text"></floating_button> -->
 				<floating_button class="form_button" button_text="set" @click="set_texts_selector"></floating_button>
 			</div>
 
@@ -26,7 +25,6 @@
 			<div class="form">
 				<p>next url selector　:　</p>
 				<input type="text" id="next_selector" v-model="next_url_selector">
-				<!-- <floating_button button_text="preview" @click="preview_next_url"></floating_button> -->
 				<floating_button class="form_button" button_text="set" @click="set_next_url_selector"></floating_button>
 			</div>
 
@@ -45,7 +43,7 @@
 					<input type="range" min="0" max="1" step="0.01" v-model="setting['volume_rate']" @change="set_volume_rate"/>
 				</div>
 				<div class="content">
-					<p>speaker_id</p>
+					<p>speaker</p>
 					<!-- <input type="number" v-model="setting['speaker_id']" @change="set_setting"/> -->
 					<select v-model="setting['speaker_id']" @change="set_setting">
 						<option v-for="v,k in speaker_data" v-if="v != speaker_id" :value="v">{{ k }}</option>
